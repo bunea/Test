@@ -7,12 +7,12 @@ namespace Test.Third
     {
         public Boolean HasDuplicates(int[] arr)
         {
-            var hashSet = new HashSet<int>();
-            foreach (var num in arr)
+            for (int i = 0; i < arr.Length; i++)
             {
-                if (!hashSet.Contains(num))
+                int index = Math.Abs(arr[i]) - 1;
+                if (arr[index] >= 0)
                 {
-                    hashSet.Add(num);
+                    arr[index] = -arr[index];
                 }
                 else
                 {
