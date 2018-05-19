@@ -9,13 +9,18 @@ namespace Test.First
             var sum = 0;
             foreach (var number in arr)
             {
-                if (number % 2 == 0)
+                if (IsEven(number))
                 {
                     sum += number;
                 }
             }
 
             return sum;
+        }
+
+        private Boolean IsEven(int num)
+        {
+            return num % 2 == 0;
         }
     }
 }
