@@ -6,7 +6,16 @@ namespace Test.First
     {
         public int Sum(int[] arr)
         {
-            throw new NotImplementedException();
+            var sum = 0;
+            foreach (var number in arr)
+            {
+                if (number % 2 == 0)
+                {
+                    sum += number;
+                }
+            }
+
+            return sum;
         }
     }
 }
