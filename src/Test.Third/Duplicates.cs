@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Test.Third
 {
@@ -6,7 +7,20 @@ namespace Test.Third
     {
         public Boolean HasDuplicates(int[] arr)
         {
-            throw new NotImplementedException();
+            var hashSet = new HashSet<int>();
+            foreach (var num in arr)
+            {
+                if (!hashSet.Contains(num))
+                {
+                    hashSet.Add(num);
+                }
+                else
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }
