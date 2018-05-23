@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Test.First
 {
@@ -6,16 +7,7 @@ namespace Test.First
     {
         public int Sum(int[] arr)
         {
-            var sum = 0;
-            foreach (var number in arr)
-            {
-                if (IsEven(number))
-                {
-                    sum += number;
-                }
-            }
-
-            return sum;
+            return arr.Where(IsEven).Sum();
         }
 
         private Boolean IsEven(int num)
