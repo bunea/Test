@@ -29,10 +29,10 @@ namespace Test.UnitTests.Second
         [InlineData(new int[] { -1, 0, -2, -3, -4, -5, -6, -7 }, new int[] { 0, -1 })]
         public void ShouldFindLargestTwoValues(int[] arr, int[] expected)
         {
-            var result = largestTwo.Largest(arr);
+            var (first, second) = largestTwo.Largest(arr);
 
-            Assert.Equal(expected[0], result[0]);
-            Assert.Equal(expected[1], result[1]);
+            Assert.Equal(expected[0], first);
+            Assert.Equal(expected[1], second);
         }
     }
 }
