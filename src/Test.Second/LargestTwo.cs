@@ -4,7 +4,7 @@ namespace Test.Second
 {
     public class LargestTwo
     {
-        public int[] Largest(int[] arr)
+        public (int first, int second) Largest(int[] arr)
         {
             if (arr.Length < 2)
             {
@@ -26,7 +26,7 @@ namespace Test.Second
                 }
             }
 
-            return new int[] { first, second };
+            return (first, second);
         }
     }
 }
